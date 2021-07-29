@@ -76,18 +76,17 @@ Table of Contents
            Collection
      4.1.  Overview
      4.2.  Adaptive Encoding
-     4.3.  Segment size and keyframe intervals
-     4.4.  Adaptive Segmented Delivery
-     4.5.  Advertising
-     4.6.  Bitrate Detection Challenges
-       4.6.1.  Idle Time between Segments
-       4.6.2.  Head-of-Line Blocking
-       4.6.3.  Wide and Rapid Variation in Path Capacity
-     4.7.  Measurement Collection
-       4.7.1.  CTA-2066: Streaming Quality of Experience Events,
+     4.3.  Adaptive Segmented Delivery
+     4.4.  Advertising
+     4.5.  Bitrate Detection Challenges
+       4.5.1.  Idle Time between Segments
+       4.5.2.  Head-of-Line Blocking
+       4.5.3.  Wide and Rapid Variation in Path Capacity
+     4.6.  Measurement Collection
+       4.6.1.  CTA-2066: Streaming Quality of Experience Events,
                Properties and Metrics
-       4.7.2.  CTA-5004: Common Media Client Data (CMCD)
-     4.8.  Unreliable Transport
+       4.6.2.  CTA-5004: Common Media Client Data (CMCD)
+     4.7.  Unreliable Transport
    5.  Evolution of Transport Protocols and Transport Protocol
            Behaviors
      5.1.  UDP and Its Behavior
@@ -701,13 +700,7 @@ Table of Contents
    construction of the bitrates offered in the manifest, are able to
    affect network utilization.
 
-4.3.  Segment size and keyframe intervals
-
-   TBD: Describe in general terms segments and frame types, tradeoffs
-   associated with segment size and keyframe interval selection.
-   (related to idle-time and caching)
-
-4.4.  Adaptive Segmented Delivery
+4.3.  Adaptive Segmented Delivery
 
    ABR playback is commonly implemented by streaming clients using HLS
    [RFC8216] or DASH [MPEG-DASH] to perform a reliable segmented
@@ -729,7 +722,7 @@ Table of Contents
    some metric monitored by the client, such as highest achievable video
    quality or lowest chances for a rebuffering event (playback stall).
 
-4.5.  Advertising
+4.4.  Advertising
 
    A variety of business models exist for producers of streaming media.
    Some content providers derive the majority of the revenue associated
@@ -801,7 +794,7 @@ Table of Contents
    further reading on mitigations, [BAP] has published some standards
    and best practices based on user experience research.
 
-4.6.  Bitrate Detection Challenges
+4.5.  Bitrate Detection Challenges
 
    This kind of bandwidth-measurement system can experience trouble in
    several ways that are affected by networking issues.  Because
@@ -825,7 +818,7 @@ Table of Contents
    that don't account for the likelihood of bandwidth measurements that
    diverge from the true path capacity.
 
-4.6.1.  Idle Time between Segments
+4.5.1.  Idle Time between Segments
 
    When the bitrate selection is chosen substantially below the
    available capacity of the network path, the response to a segment
@@ -863,7 +856,7 @@ Table of Contents
    restart can also be disabled, for example as described in
    [OReilly-HPBN].
 
-4.6.2.  Head-of-Line Blocking
+4.5.2.  Head-of-Line Blocking
 
    In the event of a lost packet on a TCP connection with SACK support
    (a common case for segmented delivery in practice), loss of a packet
@@ -886,7 +879,7 @@ Table of Contents
    have mitigation of head-of-line blocking as a protocol design goal.
    See Section 5.3 for more details.
 
-4.6.3.  Wide and Rapid Variation in Path Capacity
+4.5.3.  Wide and Rapid Variation in Path Capacity
 
    As many end devices have moved to wireless connectivity for the final
    hop (Wi-Fi, 5G, or LTE), new problems in bandwidth detction have
@@ -903,7 +896,7 @@ Table of Contents
    experience issues that can be exacerbated by insufficiently
    responsive ABR algorithms.
 
-4.7.  Measurement Collection
+4.6.  Measurement Collection
 
    In addition to measurements media players use to guide their segment-
    by-segment adaptive streaming requests, streaming media providers may
@@ -923,7 +916,7 @@ Table of Contents
    Association (CTA) who owns the Web Application Video Ecosystem (WAVE)
    project has published two important specifications.
 
-4.7.1.  CTA-2066: Streaming Quality of Experience Events, Properties and
+4.6.1.  CTA-2066: Streaming Quality of Experience Events, Properties and
         Metrics
 
    [CTA-2066] specifies a set of media player events, properties,
@@ -937,7 +930,7 @@ Table of Contents
    defining a common terminology as well as how each metric should be
    computed for consistent reporting.
 
-4.7.2.  CTA-5004: Common Media Client Data (CMCD)
+4.6.2.  CTA-5004: Common Media Client Data (CMCD)
 
    Many assumes that the CDNs have a holistic view into the health and
    performance of the streaming clients.  However, this is not the case.
@@ -955,7 +948,7 @@ Table of Contents
    standardized media-relevant information to the CDNs while they are
    fetching data.  [CTA-5004] was developed exactly for this purpose.
 
-4.8.  Unreliable Transport
+4.7.  Unreliable Transport
 
    In contrast to segmented delivery, several applications use
    unreliable UDP or SCTP with its "partial reliability" extension
@@ -1134,7 +1127,7 @@ Table of Contents
    traffic such as streaming media over the UDP ports that HTTP/3 is
    using.
 
-   As noted in Section 4.6.2, because TCP provides a reliable, in-order
+   As noted in Section 4.5.2, because TCP provides a reliable, in-order
    delivery service for applications, any packet loss for a TCP
    connection causes "head-of-line blocking", so that no TCP segments
    arriving after a packet is lost will be delivered to the receiving
