@@ -63,10 +63,9 @@ Table of Contents
        2.1.2.  Virtual Reality Bitrates
      2.2.  Path Requirements
      2.3.  Caching Systems
-     2.4.  DNS
-     2.5.  Predictable Usage Profiles
-     2.6.  Unpredictable Usage Profiles
-     2.7.  Extremely Unpredictable Usage Profiles
+     2.4.  Predictable Usage Profiles
+     2.5.  Unpredictable Usage Profiles
+     2.6.  Extremely Unpredictable Usage Profiles
    3.  Latency Considerations
      3.1.  Ultra Low-Latency
      3.2.  Low-Latency Live
@@ -332,9 +331,9 @@ Table of Contents
 
    All of this depends, of course, on the ability of a content provider
    to predict usage and provision bandwidth, caching, and other
-   mechanisms to meet the needs of users.  In some cases (Section 2.5),
+   mechanisms to meet the needs of users.  In some cases (Section 2.4),
    this is relatively routine, but in other cases, it is more difficult
-   (Section 2.6, Section 2.7).
+   (Section 2.5, Section 2.6).
 
    And as with other parts of the ecosystem, new technology brings new
    challenges.  For example, with the emergence of ultra-low-latency
@@ -354,11 +353,7 @@ Table of Contents
    at the same spot in the video for all players playing the segment
    delivered from that cache node.
 
-2.4.  DNS
-
-   TBD: More unique hostnames means more lookups and potential delays.
-
-2.5.  Predictable Usage Profiles
+2.4.  Predictable Usage Profiles
 
    Historical data shows that users consume more video and videos at
    higher bitrates than they did in the past on their connected devices.
@@ -370,7 +365,7 @@ Table of Contents
    jump over the years due to increased consumption of entertainment as
    well as conversational video.
 
-2.6.  Unpredictable Usage Profiles
+2.5.  Unpredictable Usage Profiles
 
    Although TCP/IP has been used with a number of widely used
    applications that have symmetric bandwidth requirements (similar
@@ -417,9 +412,9 @@ Table of Contents
    watch for increasing numbers of end users uploading significant
    amounts of content.
 
-2.7.  Extremely Unpredictable Usage Profiles
+2.6.  Extremely Unpredictable Usage Profiles
 
-   The causes of unpredictable usage described in Section 2.6 were more
+   The causes of unpredictable usage described in Section 2.5 were more
    or less the result of human choices, but we were reminded during a
    post-IETF 107 meeting that humans are not always in control, and
    forces of nature can cause enormous fluctuations in traffic patterns.
