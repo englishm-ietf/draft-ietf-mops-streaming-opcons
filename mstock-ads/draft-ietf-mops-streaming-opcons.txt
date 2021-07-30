@@ -5,10 +5,10 @@
 MOPS                                                          J. Holland
 Internet-Draft                                 Akamai Technologies, Inc.
 Intended status: Informational                                  A. Begen
-Expires: 30 January 2022                                 Networked Media
+Expires: 31 January 2022                                 Networked Media
                                                               S. Dawkins
                                                      Tencent America LLC
-                                                            29 July 2021
+                                                            30 July 2021
 
 
              Operational Considerations for Streaming Media
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 January 2022.
+   This Internet-Draft will expire on 31 January 2022.
 
 Copyright Notice
 
